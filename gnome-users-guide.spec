@@ -11,7 +11,7 @@ Group: Documentation
 Source: users-guide-%{PACKAGE_VERSION}-rh.tar.gz
 Source1: users-guide-%{PACKAGE_VERSION}-de.tar.gz
 
-BuildRoot:/var/tmp/gnome-users-guide-%{PACKAGE_VERSION}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Docdir: %{prefix}/doc
 BuildArchitectures: noarch
 
