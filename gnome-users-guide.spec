@@ -27,7 +27,7 @@ want a quick, handy reference.
 
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT/%{_prefix} install 
+%{__make} prefix=$RPM_BUILD_ROOT/%{_prefix} install 
 
 # hack de into this for now
 cd $RPM_BUILD_ROOT/%{_datadir}/gnome/help/users-guide
