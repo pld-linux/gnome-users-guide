@@ -5,9 +5,6 @@ Version:	1.0.5
 Release:	4
 License:	GPL
 Group:		Documentation
-Group(de):	Dokumentation
-Group(es):	Documentación
-Group(pl):	Dokumentacja
 Source0:	users-guide-%{version}-rh.tar.gz
 #Source0:	http://www.gnome.org/users-guide/users-guide-%{version}.tar.gz
 Source1:	users-guide-%{version}-de.tar.gz
