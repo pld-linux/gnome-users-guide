@@ -1,12 +1,19 @@
 Summary:	The GNOME Users' Guide
+Summary(pl):	Podrêcznik u¿ytkownika GNOME
 Name:		gnome-users-guide
 Version:	1.0.5
 Release:	4
 License:	GPL
 Group:		Documentation
+Group(de):	Dokumentation
+Group(es):	Documentación
 Group(pl):	Dokumentacja
-Source0:	users-guide-%{PACKAGE_VERSION}-rh.tar.gz
-Source1:	users-guide-%{PACKAGE_VERSION}-de.tar.gz
+Source0:	users-guide-%{version}-rh.tar.gz
+#Source0:	http://www.gnome.org/users-guide/users-guide-%{version}.tar.gz
+Source1:	users-guide-%{version}-de.tar.gz
+#Source1:	http://www.gnome.org/users-guide/de/gnome-de.tar.gz
+#Source2:	ftp://ftp.croftj.net/usr/barreiro/gnome/guia_usuario.html.tgz  (es)
+URL:		http://www.gnome.org/users-guide/project.shtml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
 
@@ -17,6 +24,9 @@ Environment on your computer.
 You should install this package if you are going to use GNOME and you
 want a quick, handy reference.
 
+%description -l pl
+Ten pakiet zawiera podrêcznik u¿ytkownika do GNOME.
+
 %prep
 %setup -q -n users-guide-%{PACKAGE_VERSION}
 
@@ -24,7 +34,6 @@ want a quick, handy reference.
 ./configure --prefix=%{_prefix}
 
 %install
-
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 %{__make} prefix=$RPM_BUILD_ROOT/%{_prefix} install 
