@@ -1,18 +1,16 @@
 Summary:	The GNOME Users' Guide
 Summary(pl):	Podrêcznik u¿ytkownika GNOME
 Name:		gnome-users-guide
-Version:	1.0.5
-Release:	4
+Version:	1.2
+Release:	1
 License:	GPL
 Group:		Documentation
-Source0:	users-guide-%{version}-rh.tar.gz
-#Source0:	http://www.gnome.org/users-guide/users-guide-%{version}.tar.gz
-Source1:	users-guide-%{version}-de.tar.gz
-#Source1:	http://www.gnome.org/users-guide/de/gnome-de.tar.gz
-#Source2:	ftp://ftp.croftj.net/usr/barreiro/gnome/guia_usuario.html.tgz  (es)
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/users-guide/1.2/users-guide-%{version}.tar.gz
 URL:		http://www.gnome.org/users-guide/project.shtml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
+
+%define		_prefix		/usr/X11R6
 
 %description
 This package will install the users' guide for the GNOME Desktop
@@ -25,19 +23,16 @@ want a quick, handy reference.
 Ten pakiet zawiera podrêcznik u¿ytkownika do GNOME.
 
 %prep
-%setup -q -n users-guide-%{PACKAGE_VERSION}
+%setup -q -n users-guide-%{version}
 
 %build
-./configure --prefix=%{_prefix}
+%configure2_13
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
-%{__make} prefix=$RPM_BUILD_ROOT/%{_prefix} install
 
-# hack de into this for now
-cd $RPM_BUILD_ROOT/%{_datadir}/gnome/help/users-guide
-tar xzf %{SOURCE1}
+%{makeinstall}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,4 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog
 %{_datadir}/gnome/help/users-guide/C
-%lang(de) %{_datadir}/gnome/help/users-guide/de
