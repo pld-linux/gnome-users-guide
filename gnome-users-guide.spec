@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Documentation
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/users-guide/1.2/users-guide-%{version}.tar.gz
+# Source0-md5:	824cdcdbdf1f1647f942ae648b60d1f3
 URL:		http://www.gnome.org/users-guide/project.shtml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
