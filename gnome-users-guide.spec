@@ -10,7 +10,6 @@ URL:		http://www.gnome.org/users-guide/project.shtml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
 
-%define		_prefix		/usr/X11R6
 
 %description
 This package will install the users' guide for the GNOME Desktop
