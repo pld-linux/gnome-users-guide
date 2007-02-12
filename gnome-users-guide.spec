@@ -1,5 +1,5 @@
 Summary:	The GNOME Users' Guide
-Summary(pl):	Podrêcznik u¿ytkownika GNOME
+Summary(pl.UTF-8):   PodrÄ™cznik uÅ¼ytkownika GNOME
 Name:		gnome-users-guide
 Version:	1.2
 Release:	1
@@ -19,8 +19,8 @@ Environment on your computer.
 You should install this package if you are going to use GNOME and you
 want a quick, handy reference.
 
-%description -l pl
-Ten pakiet zawiera podrêcznik u¿ytkownika do ¶rodowiska GNOME.
+%description -l pl.UTF-8
+Ten pakiet zawiera podrÄ™cznik uÅ¼ytkownika do Å›rodowiska GNOME.
 
 %prep
 %setup -q -n users-guide-%{version}
