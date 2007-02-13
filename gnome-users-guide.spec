@@ -1,5 +1,5 @@
 Summary:	The GNOME Users' Guide
-Summary(pl.UTF-8):   Podręcznik użytkownika GNOME
+Summary(pl.UTF-8):	Podręcznik użytkownika GNOME
 Name:		gnome-users-guide
 Version:	1.2
 Release:	1
